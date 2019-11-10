@@ -359,7 +359,9 @@ PRODUCT_SOONG_NAMESPACES += device/xiaomi/riva
 PRODUCT_PACKAGES += \
     telephony-ext \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml 
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
 
 PRODUCT_BOOT_JARS += \
     ims-ext-common_system \
