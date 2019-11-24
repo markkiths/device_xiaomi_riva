@@ -111,7 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.enable_vds=1 \
     persist.hwc.mdpcomp.enable=true \
     vendor.display.disable_skip_validate=1 \
-    vendor.gralloc.enable_fb_ubwc=1
+    vendor.gralloc.enable_fb_ubwc=1 \
+    sys.display-size=1920x1080
 
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
