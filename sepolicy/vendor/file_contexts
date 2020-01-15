@@ -2,7 +2,7 @@
 /(vendor|system/vendor)/bin/hci_qcomm_init      u:object_r:bluetooth_loader_exec:s0
 
 # Block devices
-/dev/block/bootdevice/by-name/persist		u:object_r:persist_block_device:s0
+/dev/block/bootdevice/by-name/persist           u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/userdata          u:object_r:userdata_block_device:s0
 /dev/block/bootdevice/by-name/modem             u:object_r:modem_block_device:s0
 
@@ -15,6 +15,10 @@
 
 # Init
 /(vendor|system/vendor)/bin/init\.qcom\.graphics\.sh              u:object_r:init_graphics_exec:s0
+
+# Legacy root dirs
+/bt_firmware(/.*)?                          u:object_r:bt_firmware_file:s0
+/firmware(/.*)?                             u:object_r:firmware_file:s0
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db	u:object_r:rild_file:s0

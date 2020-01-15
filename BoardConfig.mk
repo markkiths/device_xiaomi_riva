@@ -185,7 +185,6 @@ VENDOR_SECURITY_PATCH := 2019-06-01
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-tmp
 
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
