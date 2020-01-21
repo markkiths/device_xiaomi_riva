@@ -59,9 +59,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
-    persist.vendor.camera.gyro.android=1 \
+    persist.camera.gyro.disable=0 \
     persist.vendor.camera.HAL3.enabled=1 \
-    persist.vendor.camera.is_type=1 \
     vidc.enc.dcvs.extra-buff-count=2
 
 # CNE
