@@ -191,7 +191,7 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system
+    ims-ext-common
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
@@ -364,7 +364,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system \
     telephony-ext
 
 # Thermal
