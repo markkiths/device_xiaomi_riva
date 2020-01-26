@@ -197,10 +197,10 @@
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
-         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         attributes. This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
     <!-- An Array of "[ConnectivityManager connectionType],
-                      [# simultaneous connection types]"  -->
+                      [# simultaneous connection types]" -->
     <string-array translatable="false" name="radioAttributes">
         <item>"1,1"</item>
         <item>"0,1"</item>
@@ -209,16 +209,16 @@
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tethering over USB this should
-         be empty.  An example would be "usb.*" -->
+         USB interfaces. If the device doesn't want to support tethering over USB this should
+         be empty. An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
         <item>usb\\d</item>
         <item>rndis\\d</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-         should be empty.  An example would be "softap.*" -->
+         Wifi interfaces. If the device doesn't want to support tethering over Wifi this
+         should be empty. An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>wlan0</item>
     </string-array>
@@ -227,12 +227,19 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
+        <item>bnep\\d</item>
         <item>bt-pan</item>
     </string-array>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
-    <!-- The restoring is handled by modem if it is true-->
+    <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
+
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -257,6 +264,9 @@
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
 
+    <!-- Flag specifying whether VT is available on device -->
+    <bool name="config_device_vt_available">true</bool>
+
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
@@ -268,20 +278,22 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>28</item>
-        <item>10</item>
-    </integer-array>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>28</item>
-        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>28</item>
+        <item>30</item>
     </integer-array>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
@@ -312,7 +324,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">17</integer>
+    <integer name="config_screenBrightnessDoze">10</integer>
 
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
@@ -344,8 +356,11 @@
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
-    <!-- Operating volatage for bluetooth controller. 0 by default-->
+    <!-- Operating volatage for bluetooth controller. 0 by default -->
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
+
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>
 
     <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
     <string name="config_ims_package">org.codeaurora.ims</string>
@@ -429,6 +444,12 @@
 
     <!-- Component name for default assistant on this device -->
     <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
+
+    <!-- Specifies whether to decouple the auto-suspend state of the device from the display on/off state. -->
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
     
     <!-- Whether to allow sending active app broadcast -->
     <bool name="config_allowActivePackageBroadcast">true</bool>
