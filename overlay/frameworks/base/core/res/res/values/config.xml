@@ -470,4 +470,7 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+    
+    <!-- Button backlight -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
 </resources>
