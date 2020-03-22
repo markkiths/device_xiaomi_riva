@@ -10,5 +10,11 @@
     "repository":  "markkiths/android_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
     "branch":      "ten"
+  },
+  {
+    "remote":      "github",
+    "repository":  "arter97/arm64-gcc",
+    "target_path": "prebuilts/arm64-gcc",
+    "branch":      "master"
   }
 ] 
