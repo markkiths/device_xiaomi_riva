@@ -63,6 +63,9 @@ vendor/lib/libmmsw_detail_enhancement.so|da0f01b53a7ddf2768a7e8567b6a48a3403ce81
 vendor/lib/libmmsw_math.so|ad490034b9936a3bae9a505c8993b79c90d85947
 vendor/lib/libmmsw_opencl.so|6101f82838685935dfd7d14b5f0184ba6ef4abb9
 vendor/lib/libmmsw_platform.so|723fe94817b18717db484702c9ccaeb655603a6f
+vendor/lib/libmorpho_easy_hdr.so|21c05bdb7dbada55096e1a7f0be364d313a18b61
+vendor/lib/libmorpho_hdr_checker.so|9df5fb479a8b9123c6a9d90b743978d21bfcac87
+vendor/lib/libmorpho_panorama_gp.so|aa131ed9a7cd2caf5b1cb72900ca9b2126f7df46
 vendor/lib/libois_lc898122.so|ec9e1fb8ffc7d4f7afca674be1c76ec3038eb801
 vendor/lib/liboptizoom.so|1e92993743636c045438f1f15c07c1e835d9ca46
 vendor/lib/libqomx_jpegdec.so|1001faf713e24d5eb88bd73206600b5ab9e80e3c
@@ -98,6 +101,7 @@ vendor/lib/libactuator_pseudo.so|04d831577abece59ae051042bddac6f430ebd724
 vendor/lib/libactuator_rohm_bu64243gwz.so|bac8fcf1b40432af9459d804d70fc2afb094f210
 
 # Camera chromatix - from riva - V9.2.4.0.NCKMIEK
+bin/mm-qcamera-app:vendor/bin/mm-qcamera-app|c7ba621a7bd86790e7e0f2cd476ef26782ec9a1b
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|ac9b9fd8d4c2a93e10c461b62677454f22d760ab
 vendor/etc/camera/camera_config.xml|a9285443851f58b0f0eae003e0b80c9cf410f6d8
 vendor/etc/camera/csidtg_camera.xml|406e2dec13dc910415ff72fc5a7ee084c97ab61f
@@ -105,6 +109,7 @@ vendor/etc/camera/csidtg_chromatix.xml|bf4b37d8dd850ebb6bda8c5ebdd427cdb5515f35
 vendor/etc/camera/imx214_chromatix.xml|c27c3a806a18dfa693c186dbf5fdf48f715acacb
 vendor/etc/camera/imx230_chromatix.xml|5fc002e42292f302f4e5d0f45f94d5e35c6e0821
 vendor/etc/camera/imx230_qc2002_chromatix.xml|409c6201180203e1a63a0af5629d3a79102b6452
+vendor/etc/camera/imx230_qc2002_with_gyro_chromatix.xml|f920cacaefa82096d3a806d0ac7a2a4570a8f83d
 vendor/etc/camera/imx258_bear_chromatix.xml|211a55da57e93c555e12f4199ed480c068a166e4
 vendor/etc/camera/imx258_chromatix.xml|6f0e002d69a90e5e1b6c2499ad0d4218bf484f10
 vendor/etc/camera/imx258_mono_bear_chromatix.xml|81de051d0813deb56eb522e8e7cb1edbe9ee3afb
@@ -1900,37 +1905,6 @@ vendor/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw|
 vendor/lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|b2e014de968f65e013b4dae3fad67f16aa3b0a09
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|bed46204c8200d5f0ec1b37c14ecbc06f424db93
 
-# Dirac
-vendor/etc/diracmobile.config
-lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so
-lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so
-
-# Display calibration
-vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml
-vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml
-
-# Graphics firmware - from riva OPM1.171019.026 - 8.11.6
-vendor/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
-vendor/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
-vendor/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
-vendor/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
-
-# Graphics - from ZC520KL - PKQ1.181203.001
-vendor/lib/egl/eglSubDriverAndroid.so|77e41334a15522732be5bcc6b43103147d40589b
-vendor/lib/egl/libEGL_adreno.so|3e1eb3897e6b8b840ca9931aa3eb82192288bb09
-vendor/lib/egl/libGLESv1_CM_adreno.so|f2670d6c7ef0f989f161a0e5b9b42b09873d936c
-vendor/lib/egl/libGLESv2_adreno.so|49b79fadf83f3d35f4adbb718e67ffa24b5d8f4c
-vendor/lib/egl/libq3dtools_adreno.so|9f28306f1e31962eceb478bb7198c63e858ae331
-vendor/lib/egl/libq3dtools_esx.so|d108d6000e8085b7353747fb98c3e3b0774680fc
-vendor/lib/egl/libQTapGLES.so|46cd5ac004facb42bd3d6398d29e9bfe7b046de0
-vendor/lib64/egl/eglSubDriverAndroid.so|59d7a289a55526f5f6093a840627d8598114df48
-vendor/lib64/egl/libEGL_adreno.so|1a08b40750c37a75dd4cec4975430eafebda7d12
-vendor/lib64/egl/libGLESv1_CM_adreno.so|5bebc522bcc285cc7a60d983c5f0ee68b8780eef
-vendor/lib64/egl/libGLESv2_adreno.so|adccd428a1b21f062c4ac44cb5bb657fdebea519
-vendor/lib64/egl/libq3dtools_adreno.so|24d907b28777c9ddbf62e3b32dad182b87ab0aa7
-vendor/lib64/egl/libq3dtools_esx.so|8defb0ec894cb734393ad2bcc1b56af855b18551
-vendor/lib64/egl/libQTapGLES.so|61f4f7e0d56fd83f1e77599440aec63e93b8aaff
-
-# Graphics (adreno 308) - from ZC520KL - PKQ1.181203.001
-vendor/lib/libc2d30-a3xx.so|649a72ba81703b671756590b4bfed7a9ce114815
-vendor/lib64/libc2d30-a3xx.so|c3bedc4472db1d129eaf8c9b64739daa92e21887
+# Display calibration - from riva - V9.2.4.0.NCKMIEK
+vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml|1483bbcd78dfaa723c0c15caad7f1cbce41fdf1d
+vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml|814bc2ee08678f07a2065a4e911964c1fd5a298a
