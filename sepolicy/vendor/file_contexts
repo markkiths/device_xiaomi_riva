@@ -1,6 +1,3 @@
-# Init
-/(vendor|system/vendor)/bin/init\.qcom\.graphics\.sh              u:object_r:init_graphics_exec:s0
-
 # Legacy root dirs
 /bt_firmware(/.*)?                          u:object_r:bt_firmware_file:s0
 /firmware(/.*)?                             u:object_r:firmware_file:s0
